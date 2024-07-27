@@ -45,7 +45,7 @@ function JobForm(){
     e.preventDefault()
     axios.post('http://localhost:4000/jobSubmit',{nameferm,role,salary,joblocation,name,phone,gender,email})
     .then(values=>{
-      console.log(values);
+      toast.success("Registered Successfully")
     })
     .catch(error=> console.log(error))
   }
@@ -169,12 +169,13 @@ function JobForm(){
                     Are you sure want to Register ?
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-outline-primary" onClick={jobSubmit}>Register</button>
-                  </div>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-outline-primary" onClick={jobSubmit}>Register</button>
                   </div>
                 </div>
               </div>
+              <ToastContainer />
+          </div>
               <br/><br/>
               <div class="footer">
                 <br />

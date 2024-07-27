@@ -25,7 +25,7 @@ function CreateJob(){
         axios.defaults.withCredentials = true;
         axios.post('http://localhost:4000/createJob',{nameferm,role,education,agelimit,skills,lastdate,adminemail,adminphone,location,salary,aboutus})
         .then(result=>{
-            toast.success("Registered Succesfully");
+            toast.success("Job Created Succesfully");
         })
         .catch(error=>console.log(error))
     }

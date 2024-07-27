@@ -39,6 +39,9 @@ function Login(){
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                     <li class="nav-item">
+                        <Link class="nav-link" to="../">Home</Link>
+                    </li>
+                    <li class="nav-item">
                         <Link class="nav-link" to="../User/register">Register</Link>
                     </li>
                     <li class="nav-item">
