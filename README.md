@@ -8,7 +8,7 @@ Employment empowers people, enhances their self-esteem, and contributes to menta
 1.	Build a dynamic web application facilitating real time form submission.
 2.	Developed a platform where admin can create a form.
 3.	Provides a dynamic feature where admin can see the total registered application.
-4.	Implement JWT token to ensure security and current logged in user data.
+4.	Implement JWT token to ensure security and shows current logged in user data.
 5.	Designed a visual system to sent email upon successful registration.
 6.	Makes a option such user can also upload his profile photo within a certain range.
 7.	Created a feature that seperates the notification and past application.
