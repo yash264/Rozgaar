@@ -23,7 +23,6 @@ const corsOptions ={
     credentials: true,
 };
 
-//const profile = require("./controller/profile");
 
 app.use(cors(corsOptions));
 app.use(express.json());
