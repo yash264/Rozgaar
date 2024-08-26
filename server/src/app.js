@@ -34,8 +34,7 @@ app.set("views",views_path);
 hbs.registerPartials(partials_path);
 
 app.get("/",(req,res)=>{
-    res.send("Hello I am Server");
-    //res.render("index")
+    res.render("index")
 });
 
 // to submit a job application
