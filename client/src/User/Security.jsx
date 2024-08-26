@@ -14,7 +14,7 @@ function Security(){
   axios.defaults.withCredentials = true;
     const handleSubmit=(e)=>{
         e.preventDefault()
-        axios.post('http://localhost:4000/delete',{email,password})
+        axios.post('https://rozgaar-server.vercel.app/delete',{email,password})
         .then(result=>{
             toast.success("Account Deleted Successfully");
         })
