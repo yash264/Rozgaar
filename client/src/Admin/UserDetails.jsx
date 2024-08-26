@@ -14,7 +14,7 @@ function UserDetails(){
 
     axios.defaults.withCredentials = true;
     useEffect(()=>{
-        axios.post('http://localhost:4000/userDetails',{email})
+        axios.post('https://rozgaar-server.vercel.app/userDetails',{email})
         .then(values => {
             setValues(values.data[0])
         })
