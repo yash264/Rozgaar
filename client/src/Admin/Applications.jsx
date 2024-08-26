@@ -10,7 +10,7 @@ function Applications(){
     const [values,setValues] = useState([])   
     axios.defaults.withCredentials = true;
     useEffect(()=>{
-        axios.get('http://localhost:4000/totalApplication')
+        axios.get('https://rozgaar-server.vercel.app/totalApplication')
         .then(values => {
             setValues(values.data)
         })
@@ -20,7 +20,7 @@ function Applications(){
     const deleteJob=(fermname,fermrole)=>{
         console.log(fermname);
         console.log(fermrole);
-        axios.post('http://localhost:4000/deleteJob',{fermname,fermrole})
+        axios.post('https://rozgaar-server.vercel.app/deleteJob',{fermname,fermrole})
         .then(values=>{
             console.log(values)
         })
