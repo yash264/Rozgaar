@@ -68,9 +68,7 @@ function Dashboard(){
             </nav>
             
             <h2>Welcome</h2>
-            <div className="image-container">
-                <img src={values.pic} height={130} width={70} />
-            </div>
+            
             <h4>Personal Details</h4>
             <table class="table">
                 <thead>
