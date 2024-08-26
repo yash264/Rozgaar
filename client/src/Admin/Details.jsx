@@ -10,7 +10,7 @@ function Details(){
     const [values,setValues] = useState([])
     
     useEffect(()=>{
-        axios.get('http://localhost:4000/show')
+        axios.get('https://rozgaar-server.vercel.app/show')
         .then(values =>{
             setValues(values.data);
         })
