@@ -11,7 +11,7 @@ function Dashboard(){
     const navigate = useNavigate()
     const logout=(e)=>{
         e.preventDefault();
-        axios.get('http://localhost:4000/logout')
+        axios.get('https://rozgaar-server.vercel.app/logout')
         .then( res=>{
             if(res.data.msg==="success"){
                 navigate("../User/login")
@@ -24,7 +24,7 @@ function Dashboard(){
     const [values,setValues] = useState([])   
     axios.defaults.withCredentials = true;
     useEffect(()=>{
-        axios.get('http://localhost:4000/dashboard')
+        axios.get('https://rozgaar-server.vercel.app/dashboard')
         .then(values => {
             setValues(values.data.userData)
         })
