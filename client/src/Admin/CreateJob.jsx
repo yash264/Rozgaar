@@ -14,7 +14,7 @@ function CreateJob(){
     const [agelimit,setAgeLimit] = useState()
     const [skills,setSkills] = useState()
     const [lastdate,setLastDate] = useState()
-    const [adminemail,setAdminEmail] = useState()
+    const [email,setEmail] = useState()
     const [adminphone,setAdminPhone] = useState()
     const [location,setLocation] = useState()
     const [salary,setSalary] = useState()
@@ -23,7 +23,7 @@ function CreateJob(){
     const handleSubmit=(e)=>{
         e.preventDefault()
         axios.defaults.withCredentials = true;
-        axios.post('http://localhost:4000/createJob',{nameferm,role,education,agelimit,skills,lastdate,adminemail,adminphone,location,salary,aboutus})
+        axios.post('https://rozgaar-server.vercel.app/createJob',{nameferm,role,education,agelimit,skills,lastdate,email,adminphone,location,salary,aboutus})
         .then(result=>{
             toast.success("Job Created Succesfully");
         })
@@ -82,7 +82,7 @@ function CreateJob(){
                 </div>
                 <div class="col-md-6">
                     <label for="inputName" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="inputName" name="adminemail" onChange={(e)=>setAdminEmail(e.target.value)} required={true}/>
+                    <input type="email" class="form-control" id="inputName" name="email" onChange={(e)=>setEmail(e.target.value)} required={true}/>
                 </div>
                 <div class="col-md-6">
                     <label for="inputphone" class="form-label">Phone No.</label>
