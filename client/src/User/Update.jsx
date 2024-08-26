@@ -52,7 +52,7 @@ function Update(){
 
     const updateDetails=(e)=>{
         e.preventDefault()
-        axios.post('http://localhost:4000/update',{name,dob,gender,mName,fName,email,phone,aadhar,locality,address,district,house,state,pincode,country,college,regNo,course,branch,percent,year})
+        axios.post('https://rozgaar-server.vercel.app/update',{name,dob,gender,mName,fName,email,phone,aadhar,locality,address,district,house,state,pincode,country,college,regNo,course,branch,percent,year})
         .then(values => {
             toast.success("Updated Succesfully");
         })
