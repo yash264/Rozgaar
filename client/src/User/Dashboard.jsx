@@ -24,6 +24,7 @@ function Dashboard(){
     const [values,setValues] = useState([])   
     axios.defaults.withCredentials = true;
     useEffect(()=>{
+        setLoading(true);
         axios.get('https://rozgaar-server.vercel.app/dashboard')
         .then(values => {
             setValues(values.data.userData)
