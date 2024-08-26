@@ -26,6 +26,7 @@ function Dashboard(){
     useEffect(()=>{
         axios.get('https://rozgaar-server.vercel.app/dashboard')
         .then(values => {
+            console.log(values);
             setValues(values.data.userData)
         })
         .catch(error => console.log(error))
