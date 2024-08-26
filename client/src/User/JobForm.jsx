@@ -15,7 +15,7 @@ function JobForm(){
   const [values,setValues] = useState([]) 
   axios.defaults.withCredentials = true;
   useEffect(()=>{
-      axios.post('http://localhost:4000/criteria',{fermname,fermrole})
+      axios.post('https://rozgaar-server.vercel.app/criteria',{fermname,fermrole})
       .then(values => {
         setValues(values.data[0])
       })
@@ -24,7 +24,7 @@ function JobForm(){
 
   const [result,setResult] = useState([])
   useEffect(()=>{
-    axios.get('http://localhost:4000/dashboard')
+    axios.get('https://rozgaar-server.vercel.app/dashboard')
     .then(result => {
         setResult(result.data.userData)
     })
@@ -43,7 +43,7 @@ function JobForm(){
 
   const jobSubmit=(e)=>{
     e.preventDefault()
-    axios.post('http://localhost:4000/jobSubmit',{nameferm,role,salary,joblocation,name,phone,gender,email})
+    axios.post('https://rozgaar-server.vercel.app/jobSubmit',{nameferm,role,salary,joblocation,name,phone,gender,email})
     .then(values=>{
       toast.success("Registered Successfully")
     })
