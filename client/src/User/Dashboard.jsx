@@ -76,7 +76,7 @@ function Dashboard(){
                 <thead>
                 <tr>
                     <th>Name </th>
-                    <td>{values?.name}</td>
+                    <td>{values.name?}</td>
                     <th>Gender</th>
                     <td>{values?.gender}</td>
                 </tr>
@@ -90,7 +90,7 @@ function Dashboard(){
                 </tr>
                 <tr>
                     <th>Email</th>
-                    <td>{values?.email}</td>
+                    <td>{values.email?}</td>
                     <th>Phone No.</th>
                     <td>{values?.phone}</td>
                 </tr>
