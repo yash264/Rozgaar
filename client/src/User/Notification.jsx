@@ -11,7 +11,7 @@ function Notification(){
     const [values,setValues] = useState([])  
     axios.defaults.withCredentials = true;
     useEffect(()=>{
-        axios.get('http://localhost:4000/application')
+        axios.get('https://rozgaar-server.vercel.app/application')
         .then(values => {
             setValues(values.data);
         })
