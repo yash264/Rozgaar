@@ -17,7 +17,7 @@ function Register(){
     axios.defaults.withCredentials = true;
     const handleSubmit=(e)=>{
         e.preventDefault()
-        axios.post('http://localhost:4000/register',{name,gender,email,password})
+        axios.post('https://rozgaar-server.vercel.app/register',{name,gender,email,password})
         .then(result=>{
             console.log(result)
             toast.success("Registered Succesfully");
