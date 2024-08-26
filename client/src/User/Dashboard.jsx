@@ -24,11 +24,8 @@ function Dashboard(){
     const [values,setValues] = useState([])   
     axios.defaults.withCredentials = true;
     useEffect(()=>{
-        setLoading(true);
         axios.get('https://rozgaar-server.vercel.app/dashboard')
         .then(values => {
-            setLoading(false);
-            setHasError(false);
             setValues(values.data.userData)
         })
         .catch(error => console.log(error))
@@ -72,42 +69,42 @@ function Dashboard(){
             
             <h2>Welcome</h2>
             <div className="image-container">
-                <img src={values.pic} height={130} width={70} />
+                <img src={values.pic?} height={130} width={70} />
             </div>
             <h4>Personal Details</h4>
             <table class="table">
                 <thead>
                 <tr>
                     <th>Name </th>
-                    <td>{values.name}</td>
+                    <td>{values.name?}</td>
                     <th>Gender</th>
-                    <td>{values.gender}</td>
+                    <td>{values.gender?}</td>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <th>Date of Birth</th>
-                    <td>{values.dob}</td>
+                    <td>{values.dob?}</td>
                     <th>Age</th>
-                    <td>{values.age}</td>
+                    <td>{values.age?}</td>
                 </tr>
                 <tr>
                     <th>Email</th>
-                    <td>{values.email}</td>
+                    <td>{values.email?}</td>
                     <th>Phone No.</th>
-                    <td>{values.phone}</td>
+                    <td>{values.phone?}</td>
                 </tr>
                 <tr>
                     <th>Mother's Name</th>
-                    <td>{values.mName}</td>
+                    <td>{values.mName?}</td>
                     <th>Father's Name</th>
-                    <td>{values.fName}</td>
+                    <td>{values.fName?}</td>
                 </tr>
                 <tr>
                     <th>Aadhar No.</th>
-                    <td>{values.aadhar}</td>
+                    <td>{values.aadhar?}</td>
                     <th>HomeTown</th>
-                    <td>{values.district}, {values.state}</td>
+                    <td>{values.district?}, {values.state?}</td>
                 </tr>  
                 </tbody>
             </table>
@@ -117,7 +114,7 @@ function Dashboard(){
                 <thead>
                 <tr>
                     <th>Address</th>
-                    <td>{values.address}, {values.locality}, {values.district}, {values.state}, {values.country}, {values.pincode}</td>
+                    <td>{values.address?}, {values.locality?}, {values.district?}, {values.state?}, {values.country?}, {values.pincode?}</td>
                 </tr>
                 </thead>
             </table>
@@ -127,23 +124,23 @@ function Dashboard(){
                 <thead>
                 <tr>
                     <th>College Name </th>
-                    <td>{values.college}</td>
+                    <td>{values.college?}</td>
                     <th>Registration No.</th>
-                    <td>{values.regNo}</td>
+                    <td>{values.regNo?}</td>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <th>Course offered</th>
-                    <td>{values.course}</td>
+                    <td>{values.course?}</td>
                     <th>Branch</th>
-                    <td>{values.branch}</td>
+                    <td>{values.branch?}</td>
                 </tr> 
                 <tr>
                     <th>Percentage/CGPA</th>
-                    <td>{values.percent}</td>
+                    <td>{values.percent?}</td>
                     <th>Expected passing year</th>
-                    <td>{values.year}</td>
+                    <td>{values.year?}</td>
                 </tr>  
                 </tbody>
             </table>
