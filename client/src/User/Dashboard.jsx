@@ -27,6 +27,8 @@ function Dashboard(){
         setLoading(true);
         axios.get('https://rozgaar-server.vercel.app/dashboard')
         .then(values => {
+            setLoading(false);
+            setHasError(false);
             setValues(values.data.userData)
         })
         .catch(error => console.log(error))
