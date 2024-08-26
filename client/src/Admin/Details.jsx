@@ -51,7 +51,6 @@ function Details(){
                 <tr>
                     <th scope="col">Name</th>
                     <th scope="col">Gender</th>
-                    <th scope="col">Age</th>
                     <th scope="col">Email</th>
                     <th scope="col">Phone No.</th>
                 </tr>
@@ -62,7 +61,6 @@ function Details(){
                         return <tr>
                         <td>{value.name}</td>
                         <td>{value.gender}</td>
-                        <td>{value.age}</td>
                         <td>{value.email}</td> 
                         <td>{value.phone}</td> 
                         </tr> 
