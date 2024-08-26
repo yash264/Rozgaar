@@ -22,8 +22,9 @@ function Dashboard(){
     }
 
     const [values,setValues] = useState([])   
-    //axios.defaults.withCredentials = true;
-    useEffect(()=>{
+    axios.defaults.withCredentials = true;
+    useEffect((e)=>{
+        e.preventDefault();
         axios.get('https://rozgaar-server.vercel.app/dashboard')
         .then(values => {
             setValues(values.data.userData)
@@ -68,7 +69,9 @@ function Dashboard(){
             </nav>
             
             <h2>Welcome</h2>
-            
+            <div className="image-container">
+                <img src={values.pic} height={130} width={70} />
+            </div>
             <h4>Personal Details</h4>
             <table class="table">
                 <thead>
