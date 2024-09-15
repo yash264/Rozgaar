@@ -86,7 +86,7 @@ app.post("/login",(req,res)=>{
     .then(user=>{
         if(user){
             if(user.password===password){
-                const token = jwt.sign({email:user.email},"jwt-secret-key",{expiresIn:"1d"});
+                const token = jwt.sign({email:user.email},"jwt-secret-key",{expiresIn:"1d",httpOnly: true, secure: true});
                 res.cookie("token",token);
                 res.json("success")
             }
