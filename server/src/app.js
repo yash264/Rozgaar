@@ -140,7 +140,7 @@ const verifyUser = async(req,res,next)=>{
         return res.json("token was not available")
     }else{
         const isVerified = jwt.verify(token,"jwt-secret-key");
-        const userData = await Register.findOne({email:isVerified.email}).select({password:0});
+        const userData = Register.findOne({email:isVerified.email});
         req.body = userData;
         req.token = token;
         next();
