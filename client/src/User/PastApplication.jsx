@@ -64,10 +64,10 @@ function PastApplication(){
                 {
                     values.map(value=>{
                         return <tr>
-                            <td>{value.nameferm}</td>
-                            <td>{value.role}</td>
-                            <td>{value.salary}</td>
-                            <td>{value.location}</td>
+                            <td>{value.nameferm?}</td>
+                            <td>{value.role?}</td>
+                            <td>{value.salary?}</td>
+                            <td>{value.location?}</td>
                         </tr>
                     })
                 }
