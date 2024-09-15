@@ -22,7 +22,7 @@ function Dashboard(){
     }
 
     const [values,setValues] = useState([])   
-    axios.defaults.withCredentials = true;
+    //axios.defaults.withCredentials = true;
     useEffect(()=>{
         axios.get('https://rozgaar-server.vercel.app/dashboard')
         .then(values => {
@@ -77,9 +77,9 @@ function Dashboard(){
                 <thead>
                 <tr>
                     <th>Name </th>
-                    <td>{values.name?}</td>
+                    <td>{values.name}</td>
                     <th>Gender</th>
-                    <td>{values.gender?}</td>
+                    <td>{values.gender}</td>
                 </tr>
                 </thead>
                 <tbody>
