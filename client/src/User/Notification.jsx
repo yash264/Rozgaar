@@ -71,7 +71,7 @@ function Notification(){
                 </thead>
                 <tbody>
                 {
-                    values.map(value =>{
+                    values?.map(value =>{
                         return <tr>
                         <td>{value.nameferm?}</td>
                         <td>{value.role?}</td>
