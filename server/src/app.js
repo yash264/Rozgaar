@@ -20,8 +20,8 @@ const partials_path = path.join(__dirname,"../templates/partials");
 const corsOptions ={
     origin: "https://rozgaar-rust.vercel.app/",
     methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
-    credentials: true,
-    Access-Control-Allow-Credentials:true
+    //credentials: true,
+    //Access-Control-Allow-Credentials:true
 };
 
 app.use(cors(corsOptions));
