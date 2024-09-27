@@ -26,7 +26,7 @@ const partials_path = path.join(__dirname,"../templates/partials");
 
 app.use(cors(corsOptions));*/
 
-app.use(cors());
+//app.use(cors());
 
 
 app.use((req, res, next) => {
