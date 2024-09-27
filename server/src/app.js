@@ -136,6 +136,7 @@ app.post("/createJob",async(req,res)=>{
 // to verify a person
 const verifyUser = async(req,res,next)=>{
     const token = req.cookies.token;
+    console.log(token);
     if(!token){
         return res.json("token was not available")
     }else{
@@ -181,6 +182,7 @@ app.post("/uploadPic",async(req,res)=>{
 app.get("/dashboard",verifyUser, async (req,res)=>{
     try{
         const userData = req.body;
+        console.log(userData +" userData");
         return res.status(200).json({userData});
     }catch(error){
         console.log(error);
