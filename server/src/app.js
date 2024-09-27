@@ -21,7 +21,7 @@ const corsOptions ={
     origin: "https://rozgaar-rust.vercel.app/",
     methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
     credentials: true,
-    Access-Control-Allow-Credentials: *,
+    Access-Control-Allow-Credentials: "*",
 };
 
 app.use(cors(corsOptions));
