@@ -17,14 +17,27 @@ const port = process.env.PORT || 4000;
 const views_path = path.join(__dirname,"../templates/views");
 const partials_path = path.join(__dirname,"../templates/partials");
 
-const corsOptions ={
+/*const corsOptions ={
     origin: "https://rozgaar-rust.vercel.app/",
     methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
     credentials: true,
 };
 
 
-app.use(cors(corsOptions));
+app.use(cors(corsOptions));*/
+
+app.use(cors());
+
+
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.header(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    next();
+})
+
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use(cookieParser())
